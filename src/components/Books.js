@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import AddBookForm from './components/AddBookForm';
-import BookList from './components/BookList';
-import PageContainer from './components/Container';
+import PageContainer from '../../components/Container';
+import AddBookForm from './AddBookForm';
+import BookList from './BookList';
 
 const defaultBooks = [
   {
@@ -19,7 +19,7 @@ const defaultBooks = [
   { id: 3, name: '1984', price: 9.99, author: 'George Orwell' },
 ];
 
-function App() {
+function Books() {
   const [books, setBooks] = useState(defaultBooks);
 
   const handleAddBook = (newBook) => {
@@ -38,4 +38,4 @@ function App() {
   );
 }
 
-export default App;
+export default Books;
