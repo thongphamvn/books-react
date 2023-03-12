@@ -1,5 +1,4 @@
 import { Button, Grid, TextField, Typography } from '@mui/material';
-import { nanoid } from 'nanoid';
 import React, { useState } from 'react';
 
 function AddBookForm({ onAddBook }) {
@@ -11,12 +10,13 @@ function AddBookForm({ onAddBook }) {
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
+
     setNewBook({ ...newBook, [name]: value });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    onAddBook({ ...newBook, id: nanoid() });
+    onAddBook(newBook);
   };
 
   return (
