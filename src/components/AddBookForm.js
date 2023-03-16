@@ -6,7 +6,6 @@ function AddBookForm({ onAddBook }) {
   const [newBook, setNewBook] = useState({
     name: '',
     price: '',
-    author: '',
   });
 
   const handleInputChange = (event) => {
@@ -30,15 +29,6 @@ function AddBookForm({ onAddBook }) {
               label='Name'
               name='name'
               value={newBook.name}
-              onChange={handleInputChange}
-              fullWidth
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              label='Author'
-              name='author'
-              value={newBook.author}
               onChange={handleInputChange}
               fullWidth
             />

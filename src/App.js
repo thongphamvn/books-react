@@ -9,17 +9,16 @@ function App() {
       id: 1,
       name: 'The Great Gatsby',
       price: 10.99,
-      author: 'F. Scott Fitzgerald',
     },
   ]);
 
   const handleAddBook = async (newBook) => {
     books.push(newBook);
-    setBooks(books);
+    setBooks([...books]);
   };
 
   return (
-    <PageContainer name={'My Books'}>
+    <PageContainer>
       <AddBookForm onAddBook={handleAddBook} />
       <BookList books={books} />
 

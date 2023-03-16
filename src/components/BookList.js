@@ -18,7 +18,6 @@ function BookList({ books }) {
           <TableHead>
             <TableRow>
               <TableCell>Name</TableCell>
-              <TableCell>Author</TableCell>
               <TableCell>Price</TableCell>
             </TableRow>
           </TableHead>
@@ -26,7 +25,6 @@ function BookList({ books }) {
             {books.map((book) => (
               <TableRow key={book.id}>
                 <TableCell>{book.name}</TableCell>
-                <TableCell>{book.author}</TableCell>
                 <TableCell>{book.price}</TableCell>
               </TableRow>
             ))}
